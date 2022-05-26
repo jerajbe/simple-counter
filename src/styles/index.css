@@ -1,9 +1,18 @@
 .bubulala {
     font-size: 30px;
-    line-height: 0px;
-    height: 20px;
+    /* line-height: 0px; */
+    height: 50px;
     background-color: #101010;
-    padding: 15px;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 15%;
+
+}
+
+.bigClock {
+    height: 60px;
+    align-items: center;
+    justify-content: center;
 
 }
 /* 

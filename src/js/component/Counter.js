@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 export const Counter = (props) => {
 	return (
-		<div className="d-flex justify-content-between h-100 bubulala">
-			<div className="text-white justify-content-center bubulala">
+		<div className="d-flex justify-content-between bg-dark bigClock">
+			<div className="text-white justify-content-center align-middle bubulala">
 				<i className="fa-regular fa-clock"></i>
 			</div>
 			<div className="dflex text-white bubulala">

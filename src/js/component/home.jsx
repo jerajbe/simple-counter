@@ -21,7 +21,7 @@ const Home = () => {
 	}, [setOne, setTwo, setThree, setFour]);
 
 	return (
-		<div className="bg-dark d-flex justify-content-center h-100">
+		<div className="bg-dark d-flex justify-content-center">
 			<Counter fourN={four} threeN={three} twoN={two} oneN={one} />
 		</div>
 	);
