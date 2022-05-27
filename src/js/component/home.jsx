@@ -1,7 +1,9 @@
+import { func } from "prop-types";
 import React, { useState, useEffect } from "react";
 
 //include images into your bundle
 import { Counter } from "./Counter.js";
+import { Timer } from "./Timer.js";
 
 //create your first component
 const Home = () => {
@@ -20,10 +22,23 @@ const Home = () => {
 		}, 1000);
 	}, [setOne, setTwo, setThree, setFour]);
 
+	let [youWant, setYouWant] = useState(0);
+	useEffect(() => {
+		if (youWant == 0) return;
+		setTimeout(() => {
+			setYouWant(youWant - 1);
+		}, 1000);
+	}, [youWant]);
 	return (
-		<div className="bg-dark d-flex justify-content-center">
-			<Counter fourN={four} threeN={three} twoN={two} oneN={one} />
-		</div>
+		<>
+			<div className="bg-dark d-flex justify-content-center">
+				<Counter fourN={four} threeN={three} twoN={two} oneN={one} />
+			</div>
+			<div className="bg-dark d-flex justify-content-around">
+				<Timer theValue={youWant} setTheValue={setYouWant} />
+				<Counter fourN={youWant} threeN={0} twoN={0} oneN={0} />
+			</div>
+		</>
 	);
 };
 
